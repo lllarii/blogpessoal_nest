@@ -28,11 +28,15 @@ export class PostagemService {
         return postagem;
     }
 
-    async findAllByTitulo(titulo: string): Promise<Postagem[]>{
+    async findAllByTitulo(titulo: string): Promise<Postagem[]> {
         return await this.postagemRepository.find({
             where:{
                 titulo: ILike(`%${titulo}%`)
             }
         })
+    }
+
+    async create(postagem: Postagem): Promise<Postagem> {
+        return await this.postagemRepository.save(postagem)
     }
 }
