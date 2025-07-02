@@ -1,4 +1,4 @@
-import { isNotEmpty, IsNotEmpty } from "class-validator";
+import { IsNotEmpty } from "class-validator";
 import { Column, Entity, ManyToOne, PrimaryGeneratedColumn, UpdateDateColumn } from "typeorm";
 import { Tema } from "../../tema/entities/tema.entity";
 
